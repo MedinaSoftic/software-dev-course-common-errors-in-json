@@ -41,33 +41,33 @@ but it contains multiple syntax errors that prevent it from being parsed.
 
 
 // ============================================
-// 🔍 Provided JSON File with Errors
+// 🔍 Provided JSON File with Errors ****CORRECTED*****
 // ============================================
 
-const invalidBookingJSON = `
-{
-  "hotelName": "Grand City Hotel",
-  "checkInDate": "2024-05-15"
-  "checkOutDate": "2024-05-20",
-  "guests": [
-    {
-      name: "Alice Johnson",
+const validBookingJSON =  //changed to valid
+  {
+    "hotelName": "Grand City Hotel",
+    "checkInDate": "2024-05-15",  //added comma after date 
+    "checkOutDate": "2024-05-20",
+  
+      "guests": [
+      {
+      "name": "Alice Johnson",  //added double quotes to name
       "age": 30,
       "email": "alice.johnson@example.com"
     },
     {
       "name": "Bob Smith",
-      "age": undefined,
-      "email": "bob.smith@example"
+      "age": null,  //added null instead of undefined
+      "email": "bob.smith@example.com"
     }
   ],
-  "roomDetails": {
+    "roomDetails": {
     "type": "Suite",
-    "pricePerNight": 200,
-    "amenities": ["WiFi", "Breakfast", "Parking",]
+      "pricePerNight": 200,
+        "amenities": ["WiFi", "Breakfast", "Parking"] //removed comma after parking no need for that
+      }
   }
-}
-`;
 
 
 // ============================================
@@ -92,10 +92,21 @@ const invalidBookingJSON = `
 
 1️⃣ What tools or techniques did you use to identify the errors?
 
+  I created a json file so i can see it better then went line by line looking to see why the next line wasnt reading. 
+
 2️⃣ How did you confirm that your corrected JSON file was valid?
+
+  I used the reccomended links in our practice http://codebeautify.org/jsonvalidator if it passesd i know it works
 
 3️⃣ Which errors were the most difficult to spot? Why?
 
+  Simple syntax errors like commas, the are small and harder to see.
+
 4️⃣ What strategies can help you avoid these kinds of errors in the future?
    (e.g., syntax highlighting, linters, writing JSON by example)
+
+   Syntax highlighting in JSON helps us but triggering a error if the code doesnt seem to match what context we are using.
+   linters are about the same, when we add a opeining bracket but dont close it, it will turn red.
+   I have aso seen it if I misspell a keyword im usimg in a different line it will indicate that it is empty or doesnt connect to anything. 
+   these are all great tools to help correct simple errors. 
 */
