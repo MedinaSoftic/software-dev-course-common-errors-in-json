@@ -47,25 +47,25 @@ but it contains multiple syntax errors that prevent it from being parsed.
 const validBookingJSON =  //changed to valid
   {
     "hotelName": "Grand City Hotel",
-    "checkInDate": "2024-05-15",  //added comma after date 
+    "checkInDate": "2024-05-15",  //added comma after date to move to the next line of code
     "checkOutDate": "2024-05-20",
   
       "guests": [
       {
-      "name": "Alice Johnson",  //added double quotes to name
+      "name": "Alice Johnson",  //added double quotes to name to represent a key - value pair 
       "age": 30,
       "email": "alice.johnson@example.com"
     },
     {
       "name": "Bob Smith",
-      "age": null,  //added null instead of undefined
+      "age": null,  //added null instead of undefined - undefined does not work in JSON
       "email": "bob.smith@example.com"
     }
   ],
     "roomDetails": {
     "type": "Suite",
       "pricePerNight": 200,
-        "amenities": ["WiFi", "Breakfast", "Parking"] //removed comma after parking no need for that
+        "amenities": ["WiFi", "Breakfast", "Parking"] //removed comma after parking, no need for that unless some amenities were missing
       }
   }
 
